@@ -1,6 +1,6 @@
 {
+  "namespace": "models",
   "type": "record",
-  "namespace": "model",
   "name": "User",
   "fields": [
     {
@@ -12,9 +12,9 @@
       "type": "int"
     },
     {
-      "name": "panCard",
-      "type": "string",
-      "default": "null"
+      "name": "panNumber",
+      "type": "string"
     }
   ]
+
 }

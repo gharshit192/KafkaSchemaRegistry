@@ -3,19 +3,19 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package model;
+package models;
 
 import org.apache.avro.specific.SpecificData;
 
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4742297930432022579L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"model\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"panCard\",\"type\":\"string\",\"default\":\"null\"}]}");
+  private static final long serialVersionUID = -5125851293404158904L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"models\",\"fields\":[{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"panNumber\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
-  @Deprecated public java.lang.CharSequence name;
+  @Deprecated public java.lang.String name;
   @Deprecated public int age;
-  @Deprecated public java.lang.CharSequence panCard;
+  @Deprecated public java.lang.String panNumber;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -28,12 +28,12 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * All-args constructor.
    * @param name The new value for name
    * @param age The new value for age
-   * @param panCard The new value for panCard
+   * @param panNumber The new value for panNumber
    */
-  public User(java.lang.CharSequence name, java.lang.Integer age, java.lang.CharSequence panCard) {
+  public User(java.lang.String name, java.lang.Integer age, java.lang.String panNumber) {
     this.name = name;
     this.age = age;
-    this.panCard = panCard;
+    this.panNumber = panNumber;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
@@ -42,7 +42,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     switch (field$) {
     case 0: return name;
     case 1: return age;
-    case 2: return panCard;
+    case 2: return panNumber;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -51,9 +51,9 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: name = (java.lang.CharSequence)value$; break;
+    case 0: name = (java.lang.String)value$; break;
     case 1: age = (java.lang.Integer)value$; break;
-    case 2: panCard = (java.lang.CharSequence)value$; break;
+    case 2: panNumber = (java.lang.String)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -62,7 +62,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Gets the value of the 'name' field.
    * @return The value of the 'name' field.
    */
-  public java.lang.CharSequence getName() {
+  public java.lang.String getName() {
     return name;
   }
 
@@ -70,7 +70,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * Sets the value of the 'name' field.
    * @param value the value to set.
    */
-  public void setName(java.lang.CharSequence value) {
+  public void setName(java.lang.String value) {
     this.name = value;
   }
 
@@ -91,27 +91,27 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   /**
-   * Gets the value of the 'panCard' field.
-   * @return The value of the 'panCard' field.
+   * Gets the value of the 'panNumber' field.
+   * @return The value of the 'panNumber' field.
    */
-  public java.lang.CharSequence getPanCard() {
-    return panCard;
+  public java.lang.String getPanNumber() {
+    return panNumber;
   }
 
   /**
-   * Sets the value of the 'panCard' field.
+   * Sets the value of the 'panNumber' field.
    * @param value the value to set.
    */
-  public void setPanCard(java.lang.CharSequence value) {
-    this.panCard = value;
+  public void setPanNumber(java.lang.String value) {
+    this.panNumber = value;
   }
 
   /**
    * Creates a new User RecordBuilder.
    * @return A new User RecordBuilder
    */
-  public static model.User.Builder newBuilder() {
-    return new model.User.Builder();
+  public static models.User.Builder newBuilder() {
+    return new models.User.Builder();
   }
 
   /**
@@ -119,8 +119,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing builder to copy.
    * @return A new User RecordBuilder
    */
-  public static model.User.Builder newBuilder(model.User.Builder other) {
-    return new model.User.Builder(other);
+  public static models.User.Builder newBuilder(models.User.Builder other) {
+    return new models.User.Builder(other);
   }
 
   /**
@@ -128,8 +128,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing instance to copy.
    * @return A new User RecordBuilder
    */
-  public static model.User.Builder newBuilder(model.User other) {
-    return new model.User.Builder(other);
+  public static models.User.Builder newBuilder(models.User other) {
+    return new models.User.Builder(other);
   }
 
   /**
@@ -138,9 +138,9 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<User>
     implements org.apache.avro.data.RecordBuilder<User> {
 
-    private java.lang.CharSequence name;
+    private java.lang.String name;
     private int age;
-    private java.lang.CharSequence panCard;
+    private java.lang.String panNumber;
 
     /** Creates a new Builder */
     private Builder() {
@@ -151,7 +151,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(model.User.Builder other) {
+    private Builder(models.User.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -161,8 +161,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
         this.age = data().deepCopy(fields()[1].schema(), other.age);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.panCard)) {
-        this.panCard = data().deepCopy(fields()[2].schema(), other.panCard);
+      if (isValidValue(fields()[2], other.panNumber)) {
+        this.panNumber = data().deepCopy(fields()[2].schema(), other.panNumber);
         fieldSetFlags()[2] = true;
       }
     }
@@ -171,7 +171,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing User instance
      * @param other The existing instance to copy.
      */
-    private Builder(model.User other) {
+    private Builder(models.User other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -181,8 +181,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
         this.age = data().deepCopy(fields()[1].schema(), other.age);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.panCard)) {
-        this.panCard = data().deepCopy(fields()[2].schema(), other.panCard);
+      if (isValidValue(fields()[2], other.panNumber)) {
+        this.panNumber = data().deepCopy(fields()[2].schema(), other.panNumber);
         fieldSetFlags()[2] = true;
       }
     }
@@ -191,7 +191,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Gets the value of the 'name' field.
       * @return The value.
       */
-    public java.lang.CharSequence getName() {
+    public java.lang.String getName() {
       return name;
     }
 
@@ -200,7 +200,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'name'.
       * @return This builder.
       */
-    public model.User.Builder setName(java.lang.CharSequence value) {
+    public models.User.Builder setName(java.lang.String value) {
       validate(fields()[0], value);
       this.name = value;
       fieldSetFlags()[0] = true;
@@ -220,7 +220,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'name' field.
       * @return This builder.
       */
-    public model.User.Builder clearName() {
+    public models.User.Builder clearName() {
       name = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -239,7 +239,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'age'.
       * @return This builder.
       */
-    public model.User.Builder setAge(int value) {
+    public models.User.Builder setAge(int value) {
       validate(fields()[1], value);
       this.age = value;
       fieldSetFlags()[1] = true;
@@ -259,46 +259,46 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'age' field.
       * @return This builder.
       */
-    public model.User.Builder clearAge() {
+    public models.User.Builder clearAge() {
       fieldSetFlags()[1] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'panCard' field.
+      * Gets the value of the 'panNumber' field.
       * @return The value.
       */
-    public java.lang.CharSequence getPanCard() {
-      return panCard;
+    public java.lang.String getPanNumber() {
+      return panNumber;
     }
 
     /**
-      * Sets the value of the 'panCard' field.
-      * @param value The value of 'panCard'.
+      * Sets the value of the 'panNumber' field.
+      * @param value The value of 'panNumber'.
       * @return This builder.
       */
-    public model.User.Builder setPanCard(java.lang.CharSequence value) {
+    public models.User.Builder setPanNumber(java.lang.String value) {
       validate(fields()[2], value);
-      this.panCard = value;
+      this.panNumber = value;
       fieldSetFlags()[2] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'panCard' field has been set.
-      * @return True if the 'panCard' field has been set, false otherwise.
+      * Checks whether the 'panNumber' field has been set.
+      * @return True if the 'panNumber' field has been set, false otherwise.
       */
-    public boolean hasPanCard() {
+    public boolean hasPanNumber() {
       return fieldSetFlags()[2];
     }
 
 
     /**
-      * Clears the value of the 'panCard' field.
+      * Clears the value of the 'panNumber' field.
       * @return This builder.
       */
-    public model.User.Builder clearPanCard() {
-      panCard = null;
+    public models.User.Builder clearPanNumber() {
+      panNumber = null;
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -307,9 +307,9 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     public User build() {
       try {
         User record = new User();
-        record.name = fieldSetFlags()[0] ? this.name : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.name = fieldSetFlags()[0] ? this.name : (java.lang.String) defaultValue(fields()[0]);
         record.age = fieldSetFlags()[1] ? this.age : (java.lang.Integer) defaultValue(fields()[1]);
-        record.panCard = fieldSetFlags()[2] ? this.panCard : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.panNumber = fieldSetFlags()[2] ? this.panNumber : (java.lang.String) defaultValue(fields()[2]);
         return record;
       } catch (Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

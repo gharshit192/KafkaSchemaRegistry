@@ -1,4 +1,4 @@
-import model.User
+import models.User
 import org.apache.kafka.clients.producer.ProducerRecord
 import java.lang.Exception
 import java.util.*
