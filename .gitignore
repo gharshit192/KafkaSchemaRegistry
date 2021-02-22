@@ -1,0 +1,12 @@
+# Project exclude paths
+/.gradle/
+/build/
+/build/classes/java/main/
+/build/
+/.idea/
+/.gradle/
+/gradle.properties
+/gradlew
+/gradlew.bat
+/settings.gradle
+/gradle/

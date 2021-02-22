@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "namespace": "model",
+  "name": "User",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "panCard",
+      "type": "string",
+      "default": "null"
+    }
+  ]
+}
